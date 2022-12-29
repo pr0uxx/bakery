@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Passions+Conflict&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #0f0f0f 0%, #3b2723 100%);
+    color: #ffdfa8;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+nav {
+    display: flex;
+    padding: 1em;
+    justify-content: space-around;
+    z-index: 10;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #ffdfa8;
+    text-decoration: none;
+}
+
+.script-text {
+    font-family: 'Passions Conflict', cursive;
+    font-size: 2em;
+    margin: 0;
+}
+
+.info-text {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.page-container {
+    display: flex;
+    background-image: url(./img/above.png);
+    /* background-image: url(./img/cakes.png); */
+    /* width: 65vw; */
+    height: 100vh;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position-x: 35vw;
+    background-position-y: -20vh;
+}
+
+.right-side {
+    /* background-image: url('./img/cakes.png'); */
+    width: 65vw;
+    height: 100vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left-side {
+    width: 50vw;
+    width: 35vw;
+
+    height: 100vh;
+}
+
+.contact-button {
+    width: 66%;
+    padding: 1em;
+    color: #3b2723;
+    background-color: #ffdfa8;
+    text-underline-offset: .2em;
+    transition: text-decoration 1s ease-in-out, text-underline-offset 300ms;
+    border-radius: 4px;
+}
+
+.contact-button:active {
+    box-shadow: inset 2px 2px 8px 1px #84624a;
+}
+
+.nav-item {}
+
+.nav-item.active,
+.nav-item:hover {
+    text-decoration: underline;
+    text-underline-offset: .5em;
+}
+
+.loaded {
+    animation: move-loaded;
+    animation-duration: 2s;
+    overflow: hidden;
+}
+
+@keyframes move-loaded {
+    from {
+        transform: translateY(25vh);
+        opacity: 0;
+    }
+
+    to {
+        /* background-color: translateY(); */
+        opacity: 100%;
+    }
+}
+
+.input-group {
+    display: inline-flex;
+    flex-direction: column;
+    width: 80%;
+    margin-top: 1em;
+}
+
+.input-group > label {
+    margin-bottom: .5em;
+}
+
+input, textarea {
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid #ffdfa8;
+    color: #ffdfa8;
+    padding: .5em;
+}
+
+#contact > .contact-button {
+    margin-top: 2em;
+}
+
+#gallery {
+    height: 100%;
+    /* overflow-y: auto; */
+    position: relative;
+    /* top: -60px; */
+    z-index: 1;
+}
+
+#gallery-container {
+    display: flex;
+    flex-flow: wrap;
+    /* margin-top: 9%; */
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+#gallery-container > img {
+    width: 50%;
+}
+
+/* width */
+#gallery::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  #gallery::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  #gallery::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #0f0f0f 0%, #3b2723 100%);
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  #gallery::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #0f0f0f 0%, #271917 100%);
+  }

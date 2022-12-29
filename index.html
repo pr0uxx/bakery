@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="left-side">
+            <nav>
+                <div class="nav-item active">
+                    <a href='#' data-target="home">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" data-target="about">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" data-target="gallery">Gallery</a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" data-target="contact">Contact</a>
+                </div>
+            </nav>
+            <main id="home">
+                <p>▪ EST ▪ 1924 ▪</p>
+                <h1>La Bonne Pâtisserie</h1>
+
+                <p class="script-text">Some random script text here</p>
+
+                <p class="info-text">To make a bespoke order, please press the contact button below. We will be in touch
+                    as soon as our
+                    very busy schedule allows</p>
+
+                <button type="link" class="contact-button">Get in touch</button>
+            </main>
+            <main id="about" style="display: none">
+
+                <h1>Our Story</h1>
+
+                <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare imperdiet
+                    vulputate. Mauris eget
+                    vehicula mauris.</p>
+
+                <p class="info-text">In accumsan metus sem, ut condimentum risus pellentesque sed. Phasellus nec
+                    hendrerit dolor, non
+                    gravida odio. Cras nibh risus, facilisis at mi iaculis, pharetra suscipit lorem.</p>
+
+                <p class="info-text">Cras tincidunt aliquet nisi vel interdum. Mauris eros enim, luctus ut convallis a,
+                    pulvinar at erat.
+                    Curabitur mattis lacus nec ex auctor, tincidunt blandit erat lobortis.</p>
+
+                <p class="info-text">Donec porttitor dictum hendrerit. Pellentesque in faucibus sapien, id lobortis
+                    mauris. In dapibus
+                    cursus placerat.</p>
+            </main>
+            <main id="gallery" style="display: none">
+                <div id="gallery-container">
+                    
+                </div>
+            </main>
+            <main id="contact" style="display: none">
+                <h1>Drop us a message</h1>
+
+                <div class="input-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/">
+                </div>
+
+                <div class="input-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject">
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Your Message</label>
+                    <textarea rows="5" id="message"></textarea>
+                </div>
+
+                <button type="link" class="contact-button">Send</button>
+            </main>
+        </div>
+        <div class="right-side">
+
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
