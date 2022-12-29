@@ -5,7 +5,6 @@
 let galleryImagesLoaded = false;
 
 const load = (event) => {
-    console.log('in load');
     for (const id of elementIdArray) {
         const element = document.getElementById(id);
         const dataTarget = event.target.getAttribute('data-target');
@@ -25,7 +24,6 @@ const load = (event) => {
             continue;
         };
 
-
         element.classList.remove('loaded');
         element.style.display = 'none';
         element.style.overflowY = 'hidden';
@@ -41,20 +39,10 @@ const load = (event) => {
 const elementIdArray = ['home', 'about', 'gallery', 'contact'];
 
 for (const id of elementIdArray) {
-    console.log(id);
-    const element = document.querySelector(`[data-target="${id}"]`);
-    console.log(element);
-    try {
+    const elements = document.querySelectorAll(`[data-target="${id}"]`);
+    elements.forEach(element => {
         element.addEventListener("click", (e) => load(e));
-    }
-    catch {
-        console.log(id);
-    }
-
-}
-
-const loadContact = () => {
-
+    });
 }
 
 const loadGalleryImages = () => {
@@ -67,9 +55,6 @@ const loadGalleryImages = () => {
         './img/donuts_3.png',
         './img/platter_3.png',
         './img/donuts_4.png',
-        
-        
-        
         './img/platter_4.png'
     ];
 
