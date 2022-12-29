@@ -32,6 +32,10 @@ a {
     text-decoration: none;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .script-text {
     font-family: 'Passions Conflict', cursive;
     font-size: 2em;
@@ -176,4 +180,17 @@ input, textarea {
   /* Handle on hover */
   #gallery::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #0f0f0f 0%, #271917 100%);
+  }
+
+  @media only screen and (max-width: 750px){
+    .page-container{
+        background-position-x: 0;
+    }
+    .left-side {
+        background-color: rgba(0,0,0,0.7);
+        width: 100vw;
+    }
+    .right-side {
+        display: none;
+    }
   }
